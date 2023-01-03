@@ -10,5 +10,5 @@ app.mount("/static", StaticFiles(directory="static"), name="static")
 # show index.html
 @app.get("/")
 async def index():
-    return FileResponse("static/index.html")
+    return FileResponse("index.html")
 
