@@ -19,7 +19,7 @@ function preload(){
   uniformsShader = loadShader('static/mesh.vert', 'static/mesh.frag');
 
   // Get a random number 
-  rand = getRandomInt(1,5);
+  rand = getRandomInt(1,6);
   
   // Load the images
   touchIcon = loadImage("static/images/touch_icon.png");
