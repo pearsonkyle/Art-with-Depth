@@ -37,7 +37,7 @@ function setup() {
   aspect = colorImg['height'] / colorImg['width'];
 
   button = createButton('New');
-  button.position(windowWidth * 0.45, windowHeight * 0.85);
+  button.position(windowWidth * 0.85, windowHeight * 0.85);
   button.mousePressed(newpage);
   button.style('padding', Math.round(windowSize * 0.0125).toString() + 'px ' + Math.round(windowSize * 0.025).toString() + 'px');
   button.style('font-size', Math.round(windowSize*0.05).toString()+'px');
@@ -96,11 +96,12 @@ function draw() {
 
 function windowResized() {
   if (windowWidth * aspect > windowHeight) {
-    aspect = colorImg['width'] / colorImg['height'];
-    resizeCanvas(windowHeight * aspect, windowHeight);
+    resizeCanvas(windowWidth, windowWidth * aspect);
   }
   else {
-    resizeCanvas(windowWidth, windowWidth * aspect);
+    aspect = colorImg['width'] / colorImg['height'];
+    resizeCanvas(windowHeight * aspect, windowHeight);
+
   }
 
   button.position(windowWidth * 0.5 - 16, windowHeight * 0.85);
