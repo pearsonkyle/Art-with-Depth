@@ -30,13 +30,14 @@ void main() {
   projection[1] = vec4(0.0, 1.0, 0.0, 0.0);
   projection[2] = vec4(0.0, 0.0, 1.0, 1.0*depthScale);
   projection[3] = vec4(0.0, 0.0, -1.0*depthScale, 1.0-depthScale);
+
   // change to 1.0 and make depth scale go between 0-0.5?
 
   // rotate the mesh
-  rotation[0] = vec4( cos(angle),		0,		sin(angle),	0);
-  rotation[1] = vec4(0,		1.0,			 0,	0);
-  rotation[2] = vec4(-sin(angle),	0,		cos(angle),	0);
-  rotation[3] = vec4(0, 		0,				0,	1);
+  rotation[0] = vec4( cos(angle), 0, sin(angle), 0);
+  rotation[1] = vec4(0, 1.0, 0, 0);
+  rotation[2] = vec4(-sin(angle),	0, cos(angle), 0);
+  rotation[3] = vec4(0, 0, 0, 1);
 
   gl_Position = projection * rotation * positionVec4;
 }

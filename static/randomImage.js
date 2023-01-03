@@ -76,7 +76,7 @@ function draw() {
   uniformsShader.setUniform('depthTex', depthImg);
 
   if (mouseIsPressed) {
-    uniformsShader.setUniform('depthScale', -0.5*(yt - mouseY) / windowHeight);
+    uniformsShader.setUniform('depthScale', 0.5*(yt - mouseY) / windowHeight);
     uniformsShader.setUniform('angle', (xt - mouseX) / windowWidth);
     try{
       direction.remove();
