@@ -37,21 +37,21 @@ function setup() {
   aspect = colorImg['height'] / colorImg['width'];
 
   button = createButton('New');
-  button.position(windowWidth * 0.85, windowHeight * 0.85);
+  button.position(windowWidth * 0.45, windowHeight * 0.9);
   button.mousePressed(newpage);
-  button.style('padding', Math.round(windowSize * 0.0125).toString() + 'px ' + Math.round(windowSize * 0.025).toString() + 'px');
+  button.style('padding', Math.round(windowSize * 0.01).toString() + 'px ' + Math.round(windowSize * 0.02).toString() + 'px');
   button.style('font-size', Math.round(windowSize*0.05).toString()+'px');
   button.style('border-radius','25%');
   button.style('opacity','75%');
 
-    
-  direction = createButton('Slide Up');
-  direction.position(windowWidth * 0.4, windowSize * 0.5);
-  direction.style('padding', Math.round(windowSize * 0.0125).toString() + 'px ' + Math.round(windowSize * 0.025).toString() + 'px');
+  
+  direction = createButton('Touch to Move');
+  direction.position(windowWidth * 0.45, windowSize * 0.75);
+  direction.style('padding', Math.round(windowSize * 0.01).toString() + 'px ' + Math.round(windowSize * 0.02).toString() + 'px');
   direction.style('font-size', Math.round(windowSize * 0.05).toString() + 'px');
-  direction.style('border-radius', '50%');
+  direction.style('border-radius', '25%');
   direction.style('opacity', '75%');
-
+  
 
   if (windowWidth * aspect > windowHeight) {
     aspect = colorImg['width'] / colorImg['height'];
